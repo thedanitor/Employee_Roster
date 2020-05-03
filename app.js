@@ -18,12 +18,29 @@ const employeeAdd = [
     {
         type: "confirm",
         name: "addEmployee",
-        message: "Would you like to add an employee?"
+        message: "Would you like to add a team member?"
+    }
+]
+const newEmployee = [
+    {
+        type: "list",
+        name: "employeeType",
+        message: "What is the title of the team member?",
+        choices: [
+            "Manager",
+            "Engineer",
+            "Intern"
+        ]
     }
 ]
 
 inquirer.prompt(employeeAdd).then(function(data) {
-    console.log(data);
+    console.log(data.addEmployee);
+    if (data.addEmployee === true) {
+        inquirer.prompt(newEmployee).then(function(data) {
+            console.log(data.choices);
+        })
+    }
 })
 
 
