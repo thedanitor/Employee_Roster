@@ -25,12 +25,51 @@ const newEmployee = [
     {
         type: "list",
         name: "employeeType",
-        message: "What is the title of the team member?",
+        message: "Please choose employee title.",
         choices: [
             "Manager",
             "Engineer",
             "Intern"
         ]
+    },
+    {
+        type: "input",
+        name: "addName",
+        message: "Please enter employee's name."
+    },
+    {
+        type: "input",
+        name: "addID",
+        message: "Please enter employee's ID number."
+    },
+    {
+        type: "input",
+        name: "addEmail",
+        message: "Please enter employee's email."
+    }
+]
+const newManager = [
+    {
+        type: "input",
+        name: "officeNumber",
+        message: "Please enter the manager's office number."
+
+    }
+]
+const newEngineer = [
+    {
+        type: "input",
+        name: "github",
+        message: "Please enter the engineers's github username."
+
+    }
+]
+const newIntern = [
+    {
+        type: "input",
+        name: "school",
+        message: "Please enter the intern's school."
+
     }
 ]
 
