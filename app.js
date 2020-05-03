@@ -77,9 +77,22 @@ inquirer.prompt(employeeAdd).then(function(data) {
     console.log(data.addEmployee);
     if (data.addEmployee === true) {
         inquirer.prompt(newEmployee).then(function(data) {
-            console.log(data.choices);
+            console.log(data.employeeType);
+            if (data.employeeType === "Manager") {
+                inquirer.prompt(newManager).then(function(data) {
+                    console.log(data.officeNumber);
+                })
+            } else if (data.employeeType === "Engineer") {
+                inquirer.prompt(newEngineer).then(function(data) {
+                    console.log(data.github);
+                })
+            } else if (data.employeeType === "Intern") {
+                inquirer.prompt(newIntern).then(function(data) {
+                    console.log(data.school);
+                })
+            }
         })
-    }
+    } 
 })
 
 
