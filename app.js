@@ -73,6 +73,53 @@ const newIntern = [
     }
 ]
 
+function addTeamMember () {
+    inquirer.prompt(employeeAdd).then(function(data) {
+        console.log(data.addEmployee);
+    })
+}
+
+function memberType () {
+    inquirer.prompt(newEmployee).then(function(data) {
+        console.log(data.employeeType);
+    })
+}
+ 
+function addManager () {
+    inquirer.prompt(newManager).then(function(data) {
+        console.log(data.officeNumber);
+    })
+}
+
+function addEngineer () {
+    inquirer.prompt(newEngineer).then(function(data) {
+        console.log(data.github);
+    })
+}
+
+function addIntern () {
+    inquirer.prompt(newIntern).then(function(data) {
+        console.log(data.school);
+    })
+}
+
+function employeeAdder () {
+    addTeamMember();
+    // if (data.addEmployee === true) {
+    //     memberType();
+    //     if (data.employeeType === "Manager") {
+    //         addManager();
+    //     } else if (data.employeeType === "Engineer") {
+    //         addEngineer();
+    //     } else if (data.employeeType === "Intern") {
+    //         addIntern();
+    //     }
+    // }
+}
+
+employeeAdder();
+
+function addTeamMember () {
 inquirer.prompt(employeeAdd).then(function(data) {
     console.log(data.addEmployee);
     if (data.addEmployee === true) {
@@ -93,8 +140,9 @@ inquirer.prompt(employeeAdd).then(function(data) {
             }
         })
     } 
+    
 })
-
+}
 
 
 // function init() {
