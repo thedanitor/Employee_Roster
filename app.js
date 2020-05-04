@@ -128,18 +128,23 @@ inquirer.prompt(employeeAdd).then(function(data) {
             if (data.employeeType === "Manager") {
                 inquirer.prompt(newManager).then(function(data) {
                     console.log(data.officeNumber);
+                    employeeAdder();
                 })
             } else if (data.employeeType === "Engineer") {
                 inquirer.prompt(newEngineer).then(function(data) {
                     console.log(data.github);
+                    employeeAdder();
                 })
             } else if (data.employeeType === "Intern") {
                 inquirer.prompt(newIntern).then(function(data) {
                     console.log(data.school);
+                    employeeAdder();
                 })
             }
         })
     } 
+
+
     
 })
 }
