@@ -1,7 +1,25 @@
 .card {
     margin: 10px;
     background: black;
-    --notchSize: 20px;
+    border: none;
+    /* width: $size;
+    height: $size; */
+    /* background: radial-gradient(
+                  rgba(#fff,.1), rgba(#000,.2)
+                ),
+                linear-gradient(
+                  lighten($dark-grey,10),
+                  $dark-grey
+                );
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    position: relative;
+    border-radius: .5em;
+    box-shadow: 0 6px 8px -5px #000; */
+ 
+  }
+    /* --notchSize: 20px;
     clip-path: 
     polygon(
       0% var(--notchSize), 
@@ -11,14 +29,29 @@
       100% calc(100% - var(--notchSize)), 
       calc(100% - var(--notchSize)) 100%, 
       var(--notchSize) 100%, 
-      0% calc(100% - var(--notchSize))
+      0% calc(100% - var(--notchSize)) */
 
     /* 95% 0%,
     100% 5% */
 
 
-    );
-}
+    /* ); */
+    /* } */
+/* } */
+
+.card::before {
+    /* content: ""; */
+    /* width: $size / 15;
+    height: $size / 15; */
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(-135deg, white 50%, transparent 50%);
+    position: absolute;
+    display: block;
+    right: 0;
+  }
+
 .card-header {
     /* background: silver; */
     background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
@@ -29,7 +62,7 @@
     hsl(0,0%,90%) 47%, 
     hsl(0,0%,78%) 53%,
     hsl(0,0%,70%)100%);
-    margin: 0 20px;
+    margin: 0 30px;
 }
 .card-body {
     border-radius: 50%;
