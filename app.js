@@ -73,35 +73,35 @@ const newIntern = [
     }
 ]
 
-function addTeamMember () {
-    inquirer.prompt(employeeAdd).then(function(data) {
-        console.log(data.addEmployee);
-    })
-}
+// function addTeamMember () {
+//     inquirer.prompt(employeeAdd).then(function(data) {
+//         console.log(data.addEmployee);
+//     })
+// }
 
-function memberType () {
-    inquirer.prompt(newEmployee).then(function(data) {
-        console.log(data.employeeType);
-    })
-}
+// function memberType () {
+//     inquirer.prompt(newEmployee).then(function(data) {
+//         console.log(data.employeeType);
+//     })
+// }
  
-function addManager () {
-    inquirer.prompt(newManager).then(function(data) {
-        console.log(data.officeNumber);
-    })
-}
+// function addManager () {
+//     inquirer.prompt(newManager).then(function(data) {
+//         console.log(data.officeNumber);
+//     })
+// }
 
-function addEngineer () {
-    inquirer.prompt(newEngineer).then(function(data) {
-        console.log(data.github);
-    })
-}
+// function addEngineer () {
+//     inquirer.prompt(newEngineer).then(function(data) {
+//         console.log(data.github);
+//     })
+// }
 
-function addIntern () {
-    inquirer.prompt(newIntern).then(function(data) {
-        console.log(data.school);
-    })
-}
+// function addIntern () {
+//     inquirer.prompt(newIntern).then(function(data) {
+//         console.log(data.school);
+//     })
+// }
 
 function employeeAdder () {
     addTeamMember();
@@ -142,10 +142,7 @@ inquirer.prompt(employeeAdd).then(function(data) {
                 })
             }
         })
-    } 
-
-
-    
+    }   
 })
 }
 
