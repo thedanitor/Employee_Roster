@@ -1,3 +1,35 @@
 .card {
-    margin: 50px;
+    margin: 10px;
+    background: black;
+    --notchSize: 20px;
+    clip-path: 
+    polygon(
+      0% var(--notchSize), 
+      var(--notchSize) 0%, 
+      calc(100% - var(--notchSize)) 0%, 
+      100% var(--notchSize), 
+      100% calc(100% - var(--notchSize)), 
+      calc(100% - var(--notchSize)) 100%, 
+      var(--notchSize) 100%, 
+      0% calc(100% - var(--notchSize))
+
+    /* 95% 0%,
+    100% 5% */
+
+
+    );
+}
+.card-header {
+    background: silver;
+    margin: 0 20px;
+}
+.card-body {
+    border-radius: 50%;
+}
+.black {
+    height: 80px;
+    width: 50px;
+}
+.clearfix {
+    overflow: auto;
 }
