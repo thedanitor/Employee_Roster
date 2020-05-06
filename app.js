@@ -29,17 +29,17 @@ const newEmployee = [
 const newManager = [
     {
         type: "input",
-        name: "addName",
+        name: "name",
         message: "Please enter the manager's name."
     },
     {
         type: "input",
-        name: "addID",
+        name: "ID",
         message: "Please enter the manager's ID number."
     },
     {
         type: "input",
-        name: "addEmail",
+        name: "email",
         message: "Please enter the manager's email."
     },
     {
@@ -52,17 +52,17 @@ const newManager = [
 const newEngineer = [
     {
         type: "input",
-        name: "addName",
+        name: "name",
         message: "Please enter the engineers's name."
     },
     {
         type: "input",
-        name: "addID",
+        name: "ID",
         message: "Please enter the engineers's ID number."
     },
     {
         type: "input",
-        name: "addEmail",
+        name: "email",
         message: "Please enter the engineers's email."
     },
     {
@@ -75,17 +75,17 @@ const newEngineer = [
 const newIntern = [
     {
         type: "input",
-        name: "addName",
+        name: "name",
         message: "Please enter the intern's name."
     },
     {
         type: "input",
-        name: "addID",
+        name: "ID",
         message: "Please enter the intern's ID number."
     },
     {
         type: "input",
-        name: "addEmail",
+        name: "email",
         message: "Please enter the intern's email."
     },
     {
@@ -100,8 +100,9 @@ addManager();
 
 function addManager() {
     inquirer.prompt(newManager).then(function(data) {
-        console.log(data);
-        employeeArray.push(data);
+        // console.log(data.name);
+        let manager = new Manager(data.name, data.ID, data.email, data.officeNumber)
+        employees.push(manager);
         addTeamMember();
     })
 }
@@ -116,23 +117,25 @@ function addTeamMember () {
             addIntern();
         }
         else {
-            console.log(employeeArray);
+            console.log(employees);
         }
     })
 }
 
 function addEngineer () {
     inquirer.prompt(newEngineer).then(function(data) {
-        console.log(data);
-        employeeArray.push(data);
+        // console.log(data);
+        let engineer = new Engineer(data.name, data.ID, data.email, data.github)
+        employees.push(engineer);
         addTeamMember();
     })
 }
 
 function addIntern () {
     inquirer.prompt(newIntern).then(function(data) {
-        console.log(data);
-        employeeArray.push(data);
+        // console.log(data);
+        let intern = new Intern(data.name, data.ID, data.email, data.school)
+        employees.push(intern);
         addTeamMember();
     })
 }
@@ -142,7 +145,9 @@ function addIntern () {
 // which type
 // create instance
 // output to array
-var employeeArray = [];
+
+
+const employees = [];
 
 
 // After the user has input all employees desired, call the `render` function (required
