@@ -42,6 +42,7 @@
 
 .card-body {
     z-index: auto;
+    font-family: 'Gochi Hand', cursive;
 }
 .card-title {
     z-index: 4 !important;
