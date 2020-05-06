@@ -14,13 +14,6 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-// const employeeAdd = [
-//     {
-//         type: "confirm",
-//         name: "addEmployee",
-//         message: "Would you like to add a team member?"
-//     }
-// ]
 const newEmployee = [
     {
         type: "list",
@@ -32,21 +25,6 @@ const newEmployee = [
             "I have already added all employees."
         ]
     }
-    // {
-    //     type: "input",
-    //     name: "addName",
-    //     message: "Please enter employee's name."
-    // },
-    // {
-    //     type: "input",
-    //     name: "addID",
-    //     message: "Please enter employee's ID number."
-    // },
-    // {
-    //     type: "input",
-    //     name: "addEmail",
-    //     message: "Please enter employee's email."
-    // }
 ]
 const newManager = [
     {
@@ -118,51 +96,11 @@ const newIntern = [
     }
 ]
 
-// function addTeamMember () {
-//     inquirer.prompt(employeeAdd).then(function(data) {
-//         console.log(data.addEmployee);
-//     })
+
+
+// function employeeAdder () {
+//     addTeamMember();
 // }
-
-// function memberType () {
-//     inquirer.prompt(newEmployee).then(function(data) {
-//         console.log(data.employeeType);
-//     })
-// }
- 
-// function addManager () {
-//     inquirer.prompt(newManager).then(function(data) {
-//         console.log(data.officeNumber);
-//     })
-// }
-
-function addEngineer () {
-    inquirer.prompt(newEngineer).then(function(data) {
-        console.log(data.github);
-        employeeAdder();
-    })
-}
-
-function addIntern () {
-    inquirer.prompt(newIntern).then(function(data) {
-        console.log(data.school);
-        employeeAdder();
-    })
-}
-
-function employeeAdder () {
-    addTeamMember();
-    // if (data.addEmployee === true) {
-    //     memberType();
-    //     if (data.employeeType === "Manager") {
-    //         addManager();
-    //     } else if (data.employeeType === "Engineer") {
-    //         addEngineer();
-    //     } else if (data.employeeType === "Intern") {
-    //         addIntern();
-    //     }
-    // }
-}
 
 addManager();
 
@@ -186,33 +124,19 @@ function addTeamMember () {
     })
 }
 
+function addEngineer () {
+    inquirer.prompt(newEngineer).then(function(data) {
+        console.log(data.github);
+        addTeamMember();
+    })
+}
 
-// function addTeamMember () {
-// inquirer.prompt(employeeAdd).then(function(data) {
-//     console.log(data.addEmployee);
-//     if (data.addEmployee === true) {
-//         inquirer.prompt(newEmployee).then(function(data) {
-//             console.log(data.employeeType);
-//             if (data.employeeType === "Manager") {
-//                 inquirer.prompt(newManager).then(function(data) {
-//                     console.log(data.officeNumber);
-//                     employeeAdder();
-//                 })
-//             } else if (data.employeeType === "Engineer") {
-//                 inquirer.prompt(newEngineer).then(function(data) {
-//                     console.log(data.github);
-//                     employeeAdder();
-//                 })
-//             } else if (data.employeeType === "Intern") {
-//                 inquirer.prompt(newIntern).then(function(data) {
-//                     console.log(data.school);
-//                     employeeAdder();
-//                 })
-//             }
-//         })
-//     }   
-// })
-// }
+function addIntern () {
+    inquirer.prompt(newIntern).then(function(data) {
+        console.log(data.school);
+        addTeamMember();
+    })
+}
 
 //ask for manager
 //new employee
@@ -221,12 +145,6 @@ function addTeamMember () {
 // output to array
 
 
-
-// function init() {
-//     inquirer.prompt(questions).then((data) => {
-
-//     })
-// }
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
