@@ -1,48 +1,11 @@
 .card {
     margin: 10px;
     background: black;
-    border: none;
-    /* width: $size;
-    height: $size; */
-    /* background: radial-gradient(
-                  rgba(#fff,.1), rgba(#000,.2)
-                ),
-                linear-gradient(
-                  lighten($dark-grey,10),
-                  $dark-grey
-                );
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    position: relative;
-    border-radius: .5em;
-    box-shadow: 0 6px 8px -5px #000; */
- 
+    border: none; 
+    z-index: 1 !important;
   }
-    /* --notchSize: 20px;
-    clip-path: 
-    polygon(
-      0% var(--notchSize), 
-      var(--notchSize) 0%, 
-      calc(100% - var(--notchSize)) 0%, 
-      100% var(--notchSize), 
-      100% calc(100% - var(--notchSize)), 
-      calc(100% - var(--notchSize)) 100%, 
-      var(--notchSize) 100%, 
-      0% calc(100% - var(--notchSize)) */
-
-    /* 95% 0%,
-    100% 5% */
-
-
-    /* ); */
-    /* } */
-/* } */
 
 .card::before {
-    /* content: ""; */
-    /* width: $size / 15;
-    height: $size / 15; */
     content: "";
     width: 20px;
     height: 20px;
@@ -53,7 +16,6 @@
   }
 
 .card-header {
-    /* background: silver; */
     background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
     -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
     -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
@@ -63,13 +25,30 @@
     hsl(0,0%,78%) 53%,
     hsl(0,0%,70%)100%);
     margin: 0 30px;
+    z-index: 2 !important;
+    height: 120px;
 }
-.card-body {
-    border-radius: 50%;
-}
-.black {
-    height: 80px;
+.card-header::before {
+    content:"";
+    position: absolute;
+    height: 100px;
     width: 50px;
+    background: black;
+    display: block;
+    margin-left: 120px; 
+
+    /* z-index: 3 !important; */
+  }
+
+.card-body {
+    z-index: auto;
+}
+.card-title {
+    z-index: 4 !important;
+    color: darkgray;
+}
+h2 {
+    z-index: 100 !important;
 }
 .clearfix {
     overflow: auto;
