@@ -14,41 +14,56 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-const employeeAdd = [
-    {
-        type: "confirm",
-        name: "addEmployee",
-        message: "Would you like to add a team member?"
-    }
-]
+// const employeeAdd = [
+//     {
+//         type: "confirm",
+//         name: "addEmployee",
+//         message: "Would you like to add a team member?"
+//     }
+// ]
 const newEmployee = [
     {
         type: "list",
         name: "employeeType",
-        message: "Please choose employee title.",
+        message: "Please choose next employee to add.",
         choices: [
-            "Manager",
             "Engineer",
-            "Intern"
+            "Intern",
+            "I have already added all employees."
         ]
-    },
+    }
+    // {
+    //     type: "input",
+    //     name: "addName",
+    //     message: "Please enter employee's name."
+    // },
+    // {
+    //     type: "input",
+    //     name: "addID",
+    //     message: "Please enter employee's ID number."
+    // },
+    // {
+    //     type: "input",
+    //     name: "addEmail",
+    //     message: "Please enter employee's email."
+    // }
+]
+const newManager = [
     {
         type: "input",
         name: "addName",
-        message: "Please enter employee's name."
+        message: "Please enter the manager's name."
     },
     {
         type: "input",
         name: "addID",
-        message: "Please enter employee's ID number."
+        message: "Please enter the manager's ID number."
     },
     {
         type: "input",
         name: "addEmail",
-        message: "Please enter employee's email."
-    }
-]
-const newManager = [
+        message: "Please enter the manager's email."
+    },
     {
         type: "input",
         name: "officeNumber",
@@ -59,12 +74,42 @@ const newManager = [
 const newEngineer = [
     {
         type: "input",
+        name: "addName",
+        message: "Please enter the engineers's name."
+    },
+    {
+        type: "input",
+        name: "addID",
+        message: "Please enter the engineers's ID number."
+    },
+    {
+        type: "input",
+        name: "addEmail",
+        message: "Please enter the engineers's email."
+    },
+    {
+        type: "input",
         name: "github",
         message: "Please enter the engineers's github username."
 
     }
 ]
 const newIntern = [
+    {
+        type: "input",
+        name: "addName",
+        message: "Please enter the intern's name."
+    },
+    {
+        type: "input",
+        name: "addID",
+        message: "Please enter the intern's ID number."
+    },
+    {
+        type: "input",
+        name: "addEmail",
+        message: "Please enter the intern's email."
+    },
     {
         type: "input",
         name: "school",
@@ -91,17 +136,19 @@ const newIntern = [
 //     })
 // }
 
-// function addEngineer () {
-//     inquirer.prompt(newEngineer).then(function(data) {
-//         console.log(data.github);
-//     })
-// }
+function addEngineer () {
+    inquirer.prompt(newEngineer).then(function(data) {
+        console.log(data.github);
+        employeeAdder();
+    })
+}
 
-// function addIntern () {
-//     inquirer.prompt(newIntern).then(function(data) {
-//         console.log(data.school);
-//     })
-// }
+function addIntern () {
+    inquirer.prompt(newIntern).then(function(data) {
+        console.log(data.school);
+        employeeAdder();
+    })
+}
 
 function employeeAdder () {
     addTeamMember();
@@ -117,34 +164,62 @@ function employeeAdder () {
     // }
 }
 
-employeeAdder();
+addManager();
+
+
+function addManager() {
+    inquirer.prompt(newManager).then(function(data) {
+        console.log(data.addName);
+        addTeamMember();
+    })
+}
 
 function addTeamMember () {
-inquirer.prompt(employeeAdd).then(function(data) {
-    console.log(data.addEmployee);
-    if (data.addEmployee === true) {
-        inquirer.prompt(newEmployee).then(function(data) {
-            console.log(data.employeeType);
-            if (data.employeeType === "Manager") {
-                inquirer.prompt(newManager).then(function(data) {
-                    console.log(data.officeNumber);
-                    employeeAdder();
-                })
-            } else if (data.employeeType === "Engineer") {
-                inquirer.prompt(newEngineer).then(function(data) {
-                    console.log(data.github);
-                    employeeAdder();
-                })
-            } else if (data.employeeType === "Intern") {
-                inquirer.prompt(newIntern).then(function(data) {
-                    console.log(data.school);
-                    employeeAdder();
-                })
-            }
-        })
-    }   
-})
+    inquirer.prompt(newEmployee).then(function(data) {
+        console.log(data.employeeType);
+        if (data.employeeType === "Engineer") {
+            addEngineer();
+        }
+        else if (data.employeeType === "Intern") {
+            addIntern();
+        }
+    })
 }
+
+
+// function addTeamMember () {
+// inquirer.prompt(employeeAdd).then(function(data) {
+//     console.log(data.addEmployee);
+//     if (data.addEmployee === true) {
+//         inquirer.prompt(newEmployee).then(function(data) {
+//             console.log(data.employeeType);
+//             if (data.employeeType === "Manager") {
+//                 inquirer.prompt(newManager).then(function(data) {
+//                     console.log(data.officeNumber);
+//                     employeeAdder();
+//                 })
+//             } else if (data.employeeType === "Engineer") {
+//                 inquirer.prompt(newEngineer).then(function(data) {
+//                     console.log(data.github);
+//                     employeeAdder();
+//                 })
+//             } else if (data.employeeType === "Intern") {
+//                 inquirer.prompt(newIntern).then(function(data) {
+//                     console.log(data.school);
+//                     employeeAdder();
+//                 })
+//             }
+//         })
+//     }   
+// })
+// }
+
+//ask for manager
+//new employee
+// which type
+// create instance
+// output to array
+
 
 
 // function init() {
