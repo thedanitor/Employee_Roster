@@ -96,18 +96,12 @@ const newIntern = [
     }
 ]
 
-
-
-// function employeeAdder () {
-//     addTeamMember();
-// }
-
 addManager();
-
 
 function addManager() {
     inquirer.prompt(newManager).then(function(data) {
-        console.log(data.addName);
+        console.log(data);
+        employeeArray.push(data);
         addTeamMember();
     })
 }
@@ -121,19 +115,24 @@ function addTeamMember () {
         else if (data.employeeType === "Intern") {
             addIntern();
         }
+        else {
+            console.log(employeeArray);
+        }
     })
 }
 
 function addEngineer () {
     inquirer.prompt(newEngineer).then(function(data) {
-        console.log(data.github);
+        console.log(data);
+        employeeArray.push(data);
         addTeamMember();
     })
 }
 
 function addIntern () {
     inquirer.prompt(newIntern).then(function(data) {
-        console.log(data.school);
+        console.log(data);
+        employeeArray.push(data);
         addTeamMember();
     })
 }
@@ -143,7 +142,7 @@ function addIntern () {
 // which type
 // create instance
 // output to array
-
+var employeeArray = [];
 
 
 // After the user has input all employees desired, call the `render` function (required
