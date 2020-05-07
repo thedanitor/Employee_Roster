@@ -1,7 +1,11 @@
 
 <!-- Brushed metal : https://codepen.io/simurai/pen/DwJdq
 clipped corner: https://codepen.io/AlvaroFelipe/pen/yJNWgJ
-clipped corners: https://css-tricks.com/notched-boxes/ -->
+clipped corners: https://css-tricks.com/notched-boxes/ 
+before: https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+Background photo created by kjpargeter - www.freepik.com</a>
+}
+-->
 
 
 
