@@ -43,54 +43,10 @@ li {
     hsl(0,0%,70%)100%);
     margin: 0 25px;
     width: 250px;
-    height: 120px;
-    position: relative;
     font-family: 'Teko', sans-serif;
-}
-/* .card-header::before {
-    content:"";
-    position: absolute;
-    height: 80%;
-    width: 50px;
-    background: #333333;
-    display: block;
-    margin-left: 140px; 
-  } */
-
-  .box {
-    content:"";
-    position: absolute;
-    height: 80%;
-    width: 50px;
-    background: #333333;
-    display: block;
-    margin-left: 140px; 
-    margin-bottom: 20px;
-  }
-  
+}  
 .card-body {
-    /* z-index: auto; */
     font-family: 'Gochi Hand', cursive;
 }
 
-/* .card-title {
-    width: 120px;
-} */
-.name {
-    color: #808080;
-    
-    z-index: 1000;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    width: 200px;
-    display: block;
-}
-
-.title {
-    color: #808080;
-    position: absolute;
-    margin-top: 70px;
-    
-}
 
