@@ -17,3 +17,15 @@ This application was created using a combination of node, JavaScript, HTML, and 
 * These templates are joined into one HTML page and styled using CSS
 
 ## Description
+
+
+
+## Future Development
+
+I spent more time than I'd care to admit trying to make the floppy disk cards look authentic by having a "door" on the shutter. I was finally able to make it work for some cases, but it could only accomodate shorter employee names without throwing off all the formatting. I would like to pursue this more to find a functional responsive way to incorporate this. See the example below.
+
+![Example of disk with shutter door](/assets/disk_with_shutter_tab_example.png)
+
+## Acknowledgements
+
+I would like to thank UW Coding bootcamp as well as my instructor, TA's, tutor, and classmates. You have all helped me improve much more than I could have on my own.
