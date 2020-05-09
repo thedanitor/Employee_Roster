@@ -1,14 +1,4 @@
 
-<!-- Brushed metal : https://codepen.io/simurai/pen/DwJdq
-clipped corner, disk: https://codepen.io/AlvaroFelipe/pen/yJNWgJ
-clipped corners: https://css-tricks.com/notched-boxes/ 
-before: https://developer.mozilla.org/en-US/docs/Web/CSS/::before
-Background photo created by kjpargeter - www.freepik.com</a>
-}
--->
-
-
-
 # Unit 10 OOP Homework: Template Engine - Employee Summary
 
 One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. In this homework assignment, your challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, you will also be ensuring that all unit tests pass.
@@ -184,3 +174,27 @@ You are required to submit the following:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+
+Manager: Gandalf
+        1
+        gandalf@middleearthlink.net
+        80
+
+Engineer: Morpheus
+        2  
+        morpheus@zion.com
+        deathtothemachines
+E:      Indiana Jones
+        3
+        drjones@marshall.edu
+        itbelongsinamuseum
+Intern: Jar Jar Binks
+        4  
+        jarjar@meesagungan.com
+        Naboo College
+Intern: Peter Parker
+        5
+        peter@dailybugle.com
+        Midtown School
