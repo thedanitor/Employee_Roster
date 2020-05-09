@@ -3,6 +3,7 @@
 I created a command-line application that will create an employee team roster HTML page. 
 
 ![Employee roster command line interface](/assets/employeeRosterInquirerShort.gif)
+![Generated webpage](/assets/mySoftwareTeam.png)
 
 ## Technologies Used
 
@@ -20,35 +21,35 @@ This application was created using a combination of node, JavaScript, HTML, and 
 
 This project was based off of this user story:
 
-*As a software department manager
-I want to generate a webpage that displays my team's basic info
+*As a software department manager\
+I want to generate a webpage that displays my team's basic info\
 so that I have quick access to emails and GitHub profiles*
 
-The user interface is the command line so to begin the program the user would navigate to the directory and type "node app.js". 
-They will then need to answer 4 prompts: 
-"Please enter the manager's name."
-"Please enter the manager's ID number."
-"Please enter the manager's email."
+The user interface is the command line so to begin the program the user would navigate to the directory and type "node app.js".\ 
+They will then need to answer 4 prompts: \
+"Please enter the manager's name."\
+"Please enter the manager's ID number."\
+"Please enter the manager's email."\
 "Please enter the manager's office number."
 
-Once they have answered, they will be prompted with the newEmployee choice:
-"Please choose an employee to add."
-"Engineer"
-"Intern"
+Once they have answered, they will be prompted with the newEmployee choice:\
+"Please choose an employee to add."\
+"Engineer"\
+"Intern"\
 "I already added all employees."
 
-If the choice is Engineer the user will answer the following:
-"Please enter the engineers's name."
-"Please enter the engineers's ID number."
-"Please enter the engineers's email."
+If the choice is Engineer the user will answer the following:\
+"Please enter the engineers's name."\
+"Please enter the engineers's ID number."\
+"Please enter the engineers's email."\
 "Please enter the engineers's github username."
 
 And then it will return to the newEmployee choice.
 
-If the choice is Intern the user will answer the following:
-"Please enter the intern's name."
-"Please enter the intern's ID number."
-"Please enter the intern's email."
+If the choice is Intern the user will answer the following:\
+"Please enter the intern's name."\
+"Please enter the intern's ID number."\
+"Please enter the intern's email."\
 "Please enter the intern's school."
 
 And then it will return to the newEmployee choice.
@@ -68,5 +69,7 @@ I would like to thank UW Coding bootcamp as well as my instructor, TA's, tutor, 
 The following sites were very helpful for styling the floppy disk cards.
 
 https://codepen.io/simurai/pen/DwJdq
+
 https://codepen.io/AlvaroFelipe/pen/yJNWgJ
+
 https://css-tricks.com/notched-boxes/ 
